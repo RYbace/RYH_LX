@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = new Array();
+        var bbb = [];
+        var ccc = [5, 99, 5, 83, 90, 2, 4, 10, 11];
+        // var max = [];
+        // var xx = '**'
+        // var j = 0;
+        // for (i = 0; i <= ccc.length - 1; i++) {
+        //     for (j = 0; j <= ccc.length - 1 - i; j++) {
+        //         if (ccc[j] > ccc[j + 1]) {
+        //             max = ccc[j + 1];
+        //             ccc[j + 1] = ccc[j];
+        //             ccc[j] = max
+        //         }
+
+        //     }
+
+        // }
+        // console.log(ccc)
+        var mc = 0;
+
+        function max() {
+            for (i = 1; i < arguments.length; i++) {
+                if (arguments[i] > mc) {
+                    mc = arguments[i];
+                }
+            }
+            return mc;
+        }
+        console.log(max(1, 8, 66, 12, 99, 3, 4))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

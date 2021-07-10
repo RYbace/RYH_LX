@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //方法一
+        // y = parseInt(prompt('请输入年份'));   
+        // m = parseInt(prompt('请输入月份'));   
+        // d = parseInt(prompt('请输入日份')); 
+        // var days = 0; //记录总天数
+        // for (var i = 1; i < m; i++) {
+        //     if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+        //         days += 31;
+        //     } else {
+        //         days += 30;
+        //     }
+        // }
+        // if (m > 2 && (y % 400 == 0 || y % 4 == 0 && y % 100 != 0)) {
+        //     days -= 1;
+        // } else if (m > 2) {
+        //     days -= 2
+        // }
+        // days += d;
+        // alert(days)
+
+        //方法二
+
+        function getDayNum(time) {
+            var data = new Date(time);
+            var y = data.getFullYear();
+            var m = data.getMonth();
+            var d = data.getDate();
+            var days = 0;
+            for (var i = 1; i < m; i++) {
+                if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+                    days += 31;
+                } else {
+                    days += 30;
+                }
+            }
+            if (m > 2 && (y % 400 == 0 || y % 4 == 0 && y % 4 != 0)) {
+                days -= 1;
+            } else if (m > 2) {
+                days -= 2;
+            }
+            return days;
+        }
+
+        console.log(getDayNum('2019-3-1'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // prompt/alert/NaN/length/typeof
+        var num = prompt('请输入数字');
+        var num1 = 3;
+        alert(num1 + num)
+            // 1. 检测获取字符串的长度 length 
+        var str = 'my name is andy';
+        console.log(str.length); // 15
+        // isNaN() 这个方法用来判断非数字   并且返回一个值 如果是数字返回的是 false 如果不是数字返回的是true
+        console.log(isNaN(12)); // false
+        console.log(isNaN('pink老师')); // true
+        //typeof 获取变量数据类型
+        var num = 10;
+        console.log(typeof num); // number
+        var str = 'pink';
+        console.log(typeof str); // string
+        var flag = true;
+        console.log(typeof flag); // boolean
+        var vari = undefined;
+        console.log(typeof vari); // undefined
+        var timer = null;
+        console.log(typeof timer); // object
+        // prompt 取过来的值是 字符型的
+        var age = prompt('请输入您的年龄');
+        console.log(age);
+        console.log(typeof age);
+
+        // 1. 把数字型转换为字符串型 变量.toString()
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        console.log(typeof str);
+        // 2. 我们利用 String(变量)   
+        console.log(String(num));
+        // 3. 利用 + 拼接字符串的方法实现转换效果 隐式转换
+        console.log(num + '');
+
+        // var age = prompt('请输入您的年龄');
+        // 1. parseInt(变量)  可以把 字符型的转换为数字型 得到是整数
+        // console.log(parseInt(age));
+        console.log(parseInt('3.14')); // 3 取整
+        console.log(parseInt('3.94')); // 3 取整
+        console.log(parseInt('120px')); // 120 会去到这个px单位
+        console.log(parseInt('rem120px')); // NaN
+        // 2. parseFloat(变量) 可以把 字符型的转换为数字型 得到是小数 浮点数
+        console.log(parseFloat('3.14')); // 3.14
+        console.log(parseFloat('120px')); // 120 会去掉这个px单位
+        console.log(parseFloat('rem120px')); // NaN
+        // 3. 利用 Number(变量) 
+        console.log(parseFloat(''))
+        var str = '123';
+        console.log(Number(str));
+        console.log(Number('12'));
+        // 4. 利用了算数运算 -  *  /  隐式转换
+        console.log('12' - 0); // 12
+        console.log('123' - '120');
+        console.log('123' * 1);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

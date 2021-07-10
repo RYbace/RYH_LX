@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'abaasdffggghhjjkkgfddsssss3444343';
+        console.log(str.length);
+        var aa = [];
+        for (var i = 0; i < str.length; i++) {
+            if (i == 0 || i == 3 || i == 9) {
+                aa[aa.length] = str.charAt(i);
+
+            }
+
+        }
+        console.log(aa);
+
+        if (str.indexOf('i') != -1) {
+            console.log('i存在');
+        } else {
+            console.log('i不存在');
+        };
+        if (str.indexOf('c') != -1) {
+            console.log('c存在');
+        } else {
+            console.log('c不存在');
+        };
+        if (str.indexOf('b') != -1) {
+            console.log('b存在');
+        } else {
+            console.log('b不存在');
+        };
+        while (str.indexOf('g') != -1) {
+            str = str.replace('g', '22');
+        }
+        console.log(str);
+        var a = str.substr(1, 5);
+        console.log(a);
+
+        var o = {};
+
+        for (var i = 0; i < str.length; i++) {
+            var chart = str.charAt(i);
+            if (o[chart]) {
+                o[chart]++
+            } else {
+                o[chart] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        var a;
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                a = k;
+            }
+        }
+        console.log(max);
+        console.log(a);
+
+        var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+
+        function getNewarr() {
+            var newArr = [];
+            var bb = [];
+
+            function get4arr() {
+                for (var i = 1; i <= 4; i++) {
+
+
+                    function getRandom(max, min) {
+                        return Math.floor(Math.random() * (max - min + 1) + min);
+                    }
+
+                    var obj = getRandom(arr.length - 1, 0);
+                    bb[bb.length] = arr[obj]
+                }
+            }
+
+            function getnwe(k) {
+                for (var j = 0; j < k; + j++) {
+                    get4arr();
+                    if (newArr.indexOf(bb[j]) == -1) {
+                        newArr.push(bb[j]);
+                    }
+                }
+
+            }
+            getnwe();
+            while (newArr.length < 4) {
+                var k;
+                k = 4 - newArr.length;
+                getnwe(k);
+            }
+            console.log(newArr.length);
+
+        }
+        getNewarr();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

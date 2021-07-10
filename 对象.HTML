@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var pbj = {
+        //     name: '张三',
+        //     age: 18,
+        //     sex: 18,
+        //     sayHi: function() {
+        //         console.log('hai......');
+        //     }
+        // }
+        // console.log(pbj.name);
+        // // console.log(pbj['age']);
+        // // pbj.sayHi();
+        // var obj = new Object();
+        // obj.name = '明日最终';
+        // obj.age = 18;
+        // obj.sayHi = function() {
+        //     console.log('hai1');
+        // }
+        // console.log(obj.name);
+        // obj.sayHi();
+
+        function yx(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack) {
+                console.log(attack);
+            }
+        }
+        var lp = new yx('廉颇', '力量型', '500血量');
+        console.log(lp.name);
+        console.log(lp.type);
+        console.log(lp.blood);
+        lp.attack('远程');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

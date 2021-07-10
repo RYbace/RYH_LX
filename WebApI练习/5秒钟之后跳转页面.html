@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <div></div>
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        var time1 = 5;
+        btn.addEventListener('click', function() {
+            location.href = 'http://www.baidu.com';
+        })
+        setInterval(() => {
+            if (time1 == 0) {
+                location.href = 'http://www.baidu.com';
+            } else {
+                div.innerHTML = time1 + '后跳转';
+                time1--;
+            }
+
+
+        }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // btn.addEventListener('click', function() {
+        //     // console.log(location.href);
+        //     location.href = 'http://www.itcast.cn';
+        // })
+        // var timer = 5;
+        // setInterval(() => {
+        //     if (timer == 0) {
+        //         location.href = 'http://www.baidu.cn';
+        //     } else {
+        //         div.innerHTML = timer;
+        //         timer--;
+        //     }
+
+        // }, 1000);
+
+
+
+
+
+        // setInterval(function() {
+        //     if (timer == 0) {
+        //         location.href = 'http://www.itcast.cn';
+        //     } else {
+        //         div.innerHTML = '您将在' + timer + '秒钟之后跳转到首页';
+        //         timer--;
+        //     }
+
+        // }, 1000);
+    </script>
+</body>
+
+</html>

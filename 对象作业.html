@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var com = new Object();
+        // com.color = '白色';
+        // com.zl = '15kg';
+        // com.pp = '玩家国度';
+        // com.xhao = 'gx5210';
+        // com.PlayMv = function() {
+        //     return '看电影';
+        // }
+        // com.Playmu = function() {
+        //     return '听音乐';
+        // }
+        // com.Playyx = function() {
+        //     return '打游戏';
+        // }
+        // com.Playdm = function() {
+        //         return '敲代码';
+        //     }
+        //     // for (var k in com) {
+        //     //     console.log(k);
+        //     //     console.log(com[k]);
+        // console.log('我在' + com.PlayMv() + '/' + com.Playyx());
+        // function Student(name, id, sex, grade) {
+        //     this.name = name;
+        //     this.id = id;
+        //     this.sex = sex;
+        //     this.grade = grade;
+        //     this.sayhi = function(ddh) {
+        //         return ddh;
+        //     }
+
+        // }
+        // var xm = new Student('小明', '001', '男', '三年级');
+        // console.log(xm.sayhi('你好') + '我是' + xm.grade + '的' + xm.name);
+        // function getResult() {
+        //     var sum1 = 0;
+        //     var max1;
+        //     var min1;
+        //     var age1;
+
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         sum1 = sum1 + arguments[i]
+        //     }
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         max1 = arguments[0];
+        //         if (max1 < arguments[i]) {
+        //             max1 = arguments[i]
+        //         }
+        //     }
+
+        //     age1 = sum1 / arguments.length;
+
+        //     var dx = {
+        //             sum: sum1,
+        //             max: max1,
+        //             age: age1,
+        //         }
+        //         // return dx.sum;
+        //     console.log(dx);
+
+        // }
+        // getResult(1, 2)
+        // function exist(suu, arr) {
+
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (suu == arr[i]) {
+        //             alert('属于');
+        //             break;
+
+        //         } else {
+        //             if (i == arr.length - 1) {
+        //                 alert('不属于');
+        //             }
+
+
+        //         }
+        //     }
+        // }
+        // var arrr = [12, 32, 88, 77];
+        // var suuu = prompt('输入一个数')
+        // exist(suuu, arrr)
+        var zd = new Array();
+        var arr = ["张瑞淑", "徐海涛", "谢岗岗", "薛鹏", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", "屈涛", "汪孝双", "代攀飞", "武志钰", "王亚龙", "周芙榕", "李涛", "郝颖", "文冲洋", "王旭拯", "胡佳豪", "寇晓丽", "马晓晗", "王思聪", "张绿", "李德", "郑萍", "张凯", "张嘉成", "葛云侠", "杨磊", "任变", "景德", "高卷林", "刘益凡", "赵娜", "陈章鸣", "张荣召", "赵凯旋", "程倩倩", "脱朝平", "刘吉利", "郭苗苗", "马建峰", "潘瑞", "闫翔", "马晨", "李轩轩", "黄红梅", "刘书彬", "罗强", "刘东", "王可可",
+            "陈泽文", "李嘉琪", "段佳琦", "黄燕", "邱淑鸿", "宋翔宇", "王波", "樊琳", "王兆国", "许成", "李兴"
+        ];
+
+        var currentArr = ["谢岗岗", "薛鹏", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", "屈涛", "汪孝双", "代攀飞", "武志钰", "王亚龙", "周芙榕", "李涛", "郝颖", "文冲洋", "王旭拯", "胡佳豪", "寇晓丽", "马晓晗", "张绿", "李德", "郑萍", "张凯", "张嘉成", "葛云侠", "杨磊", "任变", "景德", "高卷林", "刘益凡", "赵娜", "陈章鸣", "张荣召", "赵凯旋", "程倩倩", "脱朝平", "刘吉利", "郭苗苗", "马建峰", "潘瑞", "闫翔", "马晨", "李轩轩", "黄红梅", "刘书彬", "罗强", "刘东", "陈泽文", "李嘉琪", "段佳琦", "黄燕", "邱淑鸿", "宋翔宇", "王波", "樊琳", "王兆国", "许成", "李兴"];
+
+        function undare(arr, currentArr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (currentArr.indexOf(arr[i]) == -1) {
+                    zd.push(arr[i])
+                }
+
+            }
+            return zd;
+        }
+        console.log(undare(arr, currentArr));
+
+
+
+
+        // arr = ['流机理', '马思聪', '一一', '谎言'];
+        // currentArr = ['流机理', '马思聪'];
+
+        // function noInclude(arr, currentArr) {
+        //     var newA = [];
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (currentArr.indexOf(arr[i]) == -1) {
+        //             newA.push(arr[i]);
+        //         }
+        //     }
+        //     return newA;
+        // }
+        // var re = noInclude(arr, currentArr);
+        // console.log(re);
+    </script>
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
